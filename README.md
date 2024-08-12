@@ -78,6 +78,204 @@ In our Bank Loan Report project, we recognize the need for a comprehensive 'Deta
 Objective:
 The primary objective of the Details Dashboard is to provide a comprehensive and user-friendly interface for accessing vital loan data. It will serve as a one-stop solution for users seeking detailed insights into our loan portfolio, borrower profiles, and loan performance.
 
+# BANK LOAN SQL QUERY
+---
+# KPI
+1. Total Loan Applications
+```sql
+SELECT COUNT(id) AS Total_Applications FROM bank_loan_data
+```
+---
+2. MTD Loan Applications
+```sql
+SELECT COUNT(id) AS Total_Applications FROM bank_loan_data
+WHERE MONTH(issue_date) = 12
+```
+---
+3. PMTD Loan Applications
+```sql
+SELECT COUNT(id) AS Total_Applications FROM bank_loan_data
+WHERE MONTH(issue_date) = 11
+```
+---
+4. Total Funded Amount
+```sql
+SELECT SUM(loan_amount) AS Total_Funded_Amount FROM bank_loan_data
+```
+---
+5. MTD Total Funded Amount
+```sql
+SELECT SUM(loan_amount) AS Total_Funded_Amount FROM bank_loan_data
+WHERE MONTH(issue_date) = 12
+```
+---
+6. PMTD Total Funded Amount
+```sql
+SELECT SUM(loan_amount) AS Total_Funded_Amount FROM bank_loan_data
+WHERE MONTH(issue_date) = 11
+```
+---
+7. Total Amount Received
+```sql
+SELECT SUM(total_payment) AS Total_Amount_Collected FROM bank_loan_data
+```
+---
+8. MTD Total Amount Received
+```sql
+SELECT SUM(total_payment) AS Total_Amount_Collected FROM bank_loan_data
+WHERE MONTH(issue_date) = 12
+```
+--- 
+9. PMTD Total Amount Received
+```sql
+SELECT SUM(total_payment) AS Total_Amount_Collected FROM bank_loan_data
+WHERE MONTH(issue_date) = 11
+```
+---
+10. Average Interest Rate
+```sql
+SELECT AVG(int_rate)*100 AS Avg_Int_Rate FROM bank_loan_data
+```
+---
+11. MTD Average Interest
+```sql
+SELECT AVG(int_rate)*100 AS MTD_Avg_Int_Rate FROM bank_loan_data
+WHERE MONTH(issue_date) = 12
+```
+---
+12. PMTD Average Interest
+```sql
+SELECT AVG(int_rate)*100 AS PMTD_Avg_Int_Rate FROM bank_loan_data
+WHERE MONTH(issue_date) = 11
+```
+---
+13. Avg DTI
+
+```sql
+SELECT AVG(dti)*100 AS Avg_DTI FROM bank_loan_data
+```
+---
+14. MTD Avg DTI
+```sql
+SELECT AVG(dti)*100 AS MTD_Avg_DTI FROM bank_loan_data
+WHERE MONTH(issue_date) = 12
+```
+
+```sql
+
+```
+
+```sql
+
+```
+
+```sql
+
+```
+
+```sql
+
+```
+
+```sql
+
+```
+
+```sql
+
+```
+
+```sql
+
+```
+
+```sql
+
+```
+
+
+```sql
+
+```
+
+```sql
+
+```
+
+```sql
+
+```
+
+```sql
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
