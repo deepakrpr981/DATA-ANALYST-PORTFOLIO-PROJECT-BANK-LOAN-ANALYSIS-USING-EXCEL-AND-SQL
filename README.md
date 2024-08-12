@@ -85,6 +85,7 @@ The primary objective of the Details Dashboard is to provide a comprehensive and
 ```sql
 SELECT COUNT(id) AS Total_Applications FROM bank_loan_data
 ```
+
 ---
 2. MTD Loan Applications
 ```sql
