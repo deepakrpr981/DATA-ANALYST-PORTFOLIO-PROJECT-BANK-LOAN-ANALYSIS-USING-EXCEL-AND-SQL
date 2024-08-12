@@ -26,16 +26,17 @@ In order to evaluate the performance of our lending activities and assess the qu
 4. Bad Loan Total Received Amount: Tracking the total amount received from borrowers for 'Bad Loans,' which includes all payments made on loans with a loan status of 'Charged Off.
 ---
 # Loan Status Grid View
+
 In order to gain a comprehensive overview of our lending operations and monitor the performance of loans, we aim to create a grid view report categorized by 'Loan Status.' This report will serve as a valuable tool for analysing and understanding the key indicators associated with different loan statuses. By providing insights into metrics such as 'Total Loan Applications,' 'Total Funded Amount,' 'Total Amount Received,' 'Month-to-Date (MTD) Funded Amount,' 'MTD Amount Received,' 'Average Interest Rate,' and 'Average Debt-to-Income Ratio (DTI),' this grid view will empower us to make data-driven decisions and assess the health of our loan portfolio.
 ---
 # OVERVIEW
 In our Bank Loan Report project, we aim to visually represent critical loan-related metrics and trends using a variety of chart types. These charts will provide a clear and insightful view of our lending operations, facilitating data-driven decision-making and enabling us to gain valuable insights into various loan parameters. Below are the specific chart requirements:
 1. Monthly Trends by Issue Date (Line Chart):
-Chart Type: Line Chart
-Metrics: 'Total Loan Applications,' 'Total Funded Amount,' and 'Total Amount Received'
-X-Axis: Month (based on 'Issue Date')
-Y-Axis: Metrics' Values
-Objective: This line chart will showcase how 'Total Loan Applications,' 'Total Funded Amount,' and 'Total Amount Received' vary over time, allowing us to identify seasonality and long-term trends in lending activities.
+* Chart Type: Line Chart
+* Metrics: 'Total Loan Applications,' 'Total Funded Amount,' and 'Total Amount Received'
+* X-Axis: Month (based on 'Issue Date')
+* Y-Axis: Metrics' Values
+* Objective: This line chart will showcase how 'Total Loan Applications,' 'Total Funded Amount,' and 'Total Amount Received' vary over time, allowing us to identify seasonality and long-term * trends in lending activities.
 
 
 
