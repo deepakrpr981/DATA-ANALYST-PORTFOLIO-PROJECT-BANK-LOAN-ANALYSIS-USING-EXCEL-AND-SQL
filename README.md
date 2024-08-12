@@ -160,23 +160,38 @@ SELECT AVG(dti)*100 AS Avg_DTI FROM bank_loan_data
 SELECT AVG(dti)*100 AS MTD_Avg_DTI FROM bank_loan_data
 WHERE MONTH(issue_date) = 12
 ```
-
+15. PMTD Avg DTI
 ```sql
+SELECT AVG(dti)*100 AS PMTD_Avg_DTI FROM bank_loan_data
+WHERE MONTH(issue_date) = 11
+```
+---
+16. Good Loan Percentage
+```sql
+SELECT
+    (COUNT(CASE WHEN loan_status = 'Fully Paid' OR loan_status = 'Current' THEN id END) * 100.0) / 
+	COUNT(id) AS Good_Loan_Percentage
+FROM bank_loan_data
+```
+---
+17. Good Loan Applications
+```sql
+SELECT COUNT(id) AS Good_Loan_Applications FROM bank_loan_data
+WHERE loan_status = 'Fully Paid' OR loan_status = 'Current'
+---
+18. Good Loan Funded Amount
+```
+---
+SELECT SUM(loan_amount) AS Good_Loan_Funded_amount FROM bank_loan_data
+WHERE loan_status = 'Fully Paid' OR loan_status = 'Current'
+---
+19. Good Loan Amount Received
+```sql
+SELECT SUM(total_payment) AS Good_Loan_amount_received FROM bank_loan_data
+WHERE loan_status = 'Fully Paid' OR loan_status = 'Current'
 
 ```
-
-```sql
-
-```
-
-```sql
-
-```
-
-```sql
-
-```
-
+---
 ```sql
 
 ```
