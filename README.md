@@ -294,42 +294,46 @@ GROUP BY emp_length
 ORDER BY emp_length
 ```
 ---
+29. PURPOSE
+```sql
+SELECT 
+	purpose AS PURPOSE, 
+	COUNT(id) AS Total_Loan_Applications,
+	SUM(loan_amount) AS Total_Funded_Amount,
+	SUM(total_payment) AS Total_Amount_Received
+FROM bank_loan_data
+GROUP BY purpose
+ORDER BY purpose
+```
+---
+30. HOME OWNERSHIP
+```sql
+SELECT 
+	home_ownership AS Home_Ownership, 
+	COUNT(id) AS Total_Loan_Applications,
+	SUM(loan_amount) AS Total_Funded_Amount,
+	SUM(total_payment) AS Total_Amount_Received
+FROM bank_loan_data
+GROUP BY home_ownership
+ORDER BY home_ownership
+```
+---
+31. See the results when we hit the Grade A in the filters for dashboards.
 
 ```sql
+SELECT 
+	purpose AS PURPOSE, 
+	COUNT(id) AS Total_Loan_Applications,
+	SUM(loan_amount) AS Total_Funded_Amount,
+	SUM(total_payment) AS Total_Amount_Received
+FROM bank_loan_data
+WHERE grade = 'A'
+GROUP BY purpose
+ORDER BY purpose
 
 ```
-
-
-```sql
-
-```
-
-
-```sql
-
-```
-
-```sql
-
-```
-
-```sql
-
-```
-
-```sql
-
-```
-
-
-```sql
-
-```
-
-```sql
-
-```
-
+---
+THANKS
 
 
 
