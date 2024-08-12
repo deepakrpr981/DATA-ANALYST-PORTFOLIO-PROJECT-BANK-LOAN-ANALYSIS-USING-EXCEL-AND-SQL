@@ -5,6 +5,12 @@
 
 <img width="611" alt="summary" src="https://github.com/user-attachments/assets/62d15f36-f18d-48b6-b97f-d8a1f01c713c">
 
+# Details 
+The primary objective of the Details Dashboard is to provide a comprehensive and user-friendly interface for accessing vital loan data. It will serve as a one-stop solution for users seeking detailed insights into our loan portfolio, borrower profiles, and loan performance.
+
+<img width="693" alt="overview" src="https://github.com/user-attachments/assets/f92bba6b-c1cb-4166-9311-868b53341ac6">
+
+
 
 ---
 # Key Performance Indicators (KPIs) Requirements:
