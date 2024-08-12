@@ -180,10 +180,12 @@ SELECT COUNT(id) AS Good_Loan_Applications FROM bank_loan_data
 WHERE loan_status = 'Fully Paid' OR loan_status = 'Current'
 ---
 18. Good Loan Funded Amount
-```
----
+```sql
 SELECT SUM(loan_amount) AS Good_Loan_Funded_amount FROM bank_loan_data
 WHERE loan_status = 'Fully Paid' OR loan_status = 'Current'
+```
+---
+
 ---
 19. Good Loan Amount Received
 ```sql
