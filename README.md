@@ -214,10 +214,93 @@ SELECT SUM(loan_amount) AS Bad_Loan_Funded_amount FROM bank_loan_data
 WHERE loan_status = 'Charged Off'
 ```
 ---
-Bad Loan Amount Received
+23. Bad Loan Amount Received
 ```sql
 SELECT SUM(total_payment) AS Bad_Loan_amount_received FROM bank_loan_data
 WHERE loan_status = 'Charged Off'
+```
+---
+24. LOAN STATUS
+```sql
+SELECT
+        loan_status,
+        COUNT(id) AS LoanCount,
+        SUM(total_payment) AS Total_Amount_Received,
+        SUM(loan_amount) AS Total_Funded_Amount,
+        AVG(int_rate * 100) AS Interest_Rate,
+        AVG(dti * 100) AS DTI
+    FROM
+        bank_loan_data
+    GROUP BY
+        loan_status
+```
+---
+```sql
+SELECT 
+	loan_status, 
+	SUM(total_payment) AS MTD_Total_Amount_Received, 
+	SUM(loan_amount) AS MTD_Total_Funded_Amount 
+FROM bank_loan_data
+WHERE MONTH(issue_date) = 12 
+GROUP BY loan_status
+```
+---
+25. MONTH
+```sql
+SELECT 
+	MONTH(issue_date) AS Month_Munber, 
+	DATENAME(MONTH, issue_date) AS Month_name, 
+	COUNT(id) AS Total_Loan_Applications,
+	SUM(loan_amount) AS Total_Funded_Amount,
+	SUM(total_payment) AS Total_Amount_Received
+FROM bank_loan_data
+GROUP BY MONTH(issue_date), DATENAME(MONTH, issue_date)
+ORDER BY MONTH(issue_date)
+```
+---
+26. STATE
+```sql
+SELECT 
+	address_state AS State, 
+	COUNT(id) AS Total_Loan_Applications,
+	SUM(loan_amount) AS Total_Funded_Amount,
+	SUM(total_payment) AS Total_Amount_Received
+FROM bank_loan_data
+GROUP BY address_state
+ORDER BY address_state
+```
+---
+27. TERM
+```sql
+SELECT 
+	term AS Term, 
+	COUNT(id) AS Total_Loan_Applications,
+	SUM(loan_amount) AS Total_Funded_Amount,
+	SUM(total_payment) AS Total_Amount_Received
+FROM bank_loan_data
+GROUP BY term
+ORDER BY term
+```
+---
+28. EMPLOYEE LENGTH
+```sql
+SELECT 
+	emp_length AS Employee_Length, 
+	COUNT(id) AS Total_Loan_Applications,
+	SUM(loan_amount) AS Total_Funded_Amount,
+	SUM(total_payment) AS Total_Amount_Received
+FROM bank_loan_data
+GROUP BY emp_length
+ORDER BY emp_length
+```
+---
+
+```sql
+
+```
+
+
+```sql
 
 ```
 
@@ -239,28 +322,13 @@ WHERE loan_status = 'Charged Off'
 ```
 
 
+```sql
 
+```
 
+```sql
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
 
 
 
